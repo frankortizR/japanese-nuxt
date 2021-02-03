@@ -1,0 +1,115 @@
+
+.model1-div-cont-part1 {
+    background-color: $color1;
+}
+
+.model1-div-cont-modelo1 {
+    background: none;
+}
+
+.model1-text {
+    color: $color2;
+}
+
+.model1-text-description {
+    color: $color3;
+}
+
+//styles de parte de practica
+.model1-icono-play {
+    border-style: solid;
+    border-radius: 5px;
+    text-decoration: none;
+    border-color: $color2;
+    border-width: 2px;
+    background-color: $color1
+}
+
+.model1-reproducir {
+    color: $color3;
+}
+
+.model1-boton-practica-conromaji {
+    
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: $color3;
+    text-align: center;
+}
+
+.model1-boton-practica-auto {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: $color3;
+    text-align: center;
+}
+
+.model1-texto-practica {
+    font-size: 100%;
+    color: $color3;
+}
+
+.model1-boton-practica-automodel1-pressed{
+    width: 100%;
+    margin: 15px 0 15px;
+    padding-top: 5px;
+    font-size: 20px;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background-color: $color5;
+    color: $color1;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: $color3;
+    text-align: center;
+}
+.model1-boton-practica-automodel1-pressed:hover{
+    cursor: pointer;
+}
+.model1-pressed{
+    background-color: $color5;
+    color: $color1;   
+}
+
+.opttrue {
+    background-color: $color5;
+    color: $color1;
+}
+
+//style show answer
+.model1-texto-show {
+    border-color: $color3;
+    color: $color2;
+}
+
+.model1-boton-next {
+    border-color: $color3;
+}
+
+.model1-texto-practica-dinamic {
+    color: $color2;
+}
+
+.model1-div-cont-progresbar {
+    background-color: $color2;
+}
+
+.model1-div-cont-progresbar span {
+    background-color: $color5;
+}
+
+.model1-boton-practica-mute {
+    border-style: solid;
+    border-color: $color3;
+    border-radius: 5px;
+    border-width: 2px;
+}

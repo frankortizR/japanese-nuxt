@@ -1,0 +1,681 @@
+
+body {
+    background-color: $color1;
+}
+
+.titulo-principal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    line-height: 30px;
+    font-size: 100%;
+    text-align: center;
+}
+
+
+.model3-div-cont-part1 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+.model3-div-cont-modelo1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10px;
+
+}
+
+
+.model3-title {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.model3-div-cont-info {
+    user-select: text;
+    cursor: default;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 70%;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+}
+
+.model3-modelo-head {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.model3-icon-target{
+    width: 40px;
+    height: 40px;
+}
+
+.model3-modelo-title {
+    display: inline;
+    font-size: 30px;
+}
+
+.model3-modelo-related {
+    display: inline;
+    margin-left: 10%;
+    font-size: 20px;
+}
+
+.moidel1-modelo-description {
+    font-size: 90%;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+}
+
+.model3-div-cont-configs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 70%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: center;
+        align-items: center;
+
+}
+
+.model3-boton-practica-auto {
+    width: 100%;
+    margin: 15px 0 15px;
+    padding-top: 5px;
+    background-color: $color7;
+    font-size: 20px;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.model3-boton-practica-auto:hover {
+    -webkit-box-shadow: 1px 2px 2px;
+            box-shadow: 1px 2px 2px;
+    cursor: pointer;
+}
+.model3-boton-practica-mute:hover{
+    -webkit-box-shadow: 1px 2px 2px;
+            box-shadow: 1px 2px 2px;
+    cursor: pointer;
+}
+
+.model3-boton-practica-auto:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: $color5;
+}
+
+.model3-boton-practica-mute {
+    width: 100px;
+    margin: 15px 0;
+    padding-top: 5px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    text-align: center;
+    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.model3-div-cont-separator {
+    width: 80%;
+    margin: auto;
+}
+
+.model3-separator {
+    height: 0.5px;
+    background-color: $color2;
+}
+
+.opt {
+    margin: 15px 5px;
+}
+
+
+
+//estilos de practica
+.model3-div-cont-practice-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    //min-height: 80px;
+}
+
+.model3-div-cont-practice {
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.model3-div-cont-play {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+    //margin-top: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.model3-icono-play {
+    text-align: center;
+    height: 30px;
+    width: 40px;
+    padding-left: 2px;
+    margin-right: 8px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+    transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.model3-icono-play:hover {
+    -webkit-box-shadow: 1px 2px 2px;
+            box-shadow: 1px 2px 2px;
+    cursor: pointer;
+}
+
+.model3-icono-play:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: $color5;
+}
+
+.model3-reproducir {
+    //margin-left: 3%;
+    padding-top: 6px;
+}
+
+.model3-div-cont-practica-conromaji {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 20px;
+    max-width: 150px;
+    width: 30%;
+    min-width: 110px;
+}
+
+.model3-boton-practica-conromaji {
+    width: 150px;
+    padding-top: 5px;
+    position: relative;
+    
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
+}
+
+
+
+.model3-boton-practica-conromaji:hover {
+    -webkit-box-shadow: 1px 2px 2px;
+            box-shadow: 1px 2px 2px;
+    cursor: pointer;
+}
+
+.model3-div-cont-practice{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.model3-div-cont-practica{
+    margin: 0px 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.model3-texto-practica {
+    height: 80%;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.model3-texto-practica-static {
+    font-size: 45px;
+}
+
+.model3-texto-practica-dinamic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 40px;
+    height: 80%;
+}
+
+
+.hide {
+    display: none;
+}
+
+//style show answer
+.model3-div-cont-answer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 20px;
+}
+
+.model3-div-cont-show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.model3-texto-show {
+    border-style: solid;
+    border-radius: 5px;
+    height: 30px;
+    width: 160px;
+    text-align: center;
+    padding-top: 5px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.model3-texto-show:hover {
+    -webkit-box-shadow: 1px 2px 2px;
+            box-shadow: 1px 2px 2px;
+    cursor: pointer;
+}
+
+.model3-texto-show:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: $color5;
+}
+
+.model3-icono-show {
+    width: 50px;
+    height: 50px;
+}
+
+.model-icono-noshow {
+    padding-top: 5px;
+    margin: auto;
+    font-size: 30px;
+    text-align: center;
+}
+
+.model3-div-imagen-answear {
+    width: 50px;
+    height: 50px;
+
+}
+
+.model3-imagen-answear {
+    width: 100%;
+    height: 100%;
+}
+
+.model3-boton-next {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    border-style: solid;
+    border-radius: 5px;
+    width: 60px;
+    height: 35px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.model3-boton-next:hover {
+    -webkit-box-shadow: 1px 2px 2px;
+            box-shadow: 1px 2px 2px;
+    cursor: pointer;
+}
+
+.model3-boton-next:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: $color5;
+}
+
+.model3-boton-next-text {
+    font-size: 20px;
+    color: $color2;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+.model3-div-cont-progresbar {
+    height: 10px;
+    width: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.model3-div-cont-progresbar span {
+    margin: 0 0px;
+    display: block;
+    height: 30%;
+
+}
+
+.model3-start {
+    width: 0%;
+    -webkit-transition: width 2s linear;
+    -o-transition: width 2s linear;
+    transition: width 2s linear;
+}
+
+.model3-end {
+    width: 100%;
+    -webkit-transition: width 2s linear;
+    -o-transition: width 2s linear;
+    transition: width 2s linear;
+    -moz-transition: width 2s linear;
+    -ms-transition: width 2s linear;
+}
+
+.model3-div-cont-progress-task{
+    width: 80%;
+    height: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px  0;
+}
+
+.model3_progress_task_box{
+    height: 90%;
+    width: 8%;
+    border: 2px solid $color2;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+}
+
+.model3_final_message{
+    width: 60%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:$color2;
+    margin: 10px 0px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.model3_final_message h6 {
+    font-size: 145%;
+    font-weight: 900;
+}
+
+.model3_div_congrats_false{
+    display: none;
+}
+
+.model3_div_nograts_false{
+    display: none;
+}
+
+.model3_div_congrats_right{
+    color: $color7;
+}
+
+.model3_div_nograts_wrong{
+    color: $color5;
+}
+
+
+
+
+
+//==============================  RESPONSIVE DESIGN ==========================//
+
+
+
+@media screen and (min-width: 380px) {
+
+    .model3-div-cont-info {
+        max-width: 400px;
+    }
+
+    .model3-div-cont-configs {
+        max-width: 230px;
+    }
+
+    .model3-div-cont-practica-conromaji {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -ms-flex-line-pack: center;
+            align-content: center;
+        //width: 300px;
+        margin:0;
+    }
+    
+
+    .model3-div-cont-practice {
+        padding: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    
+
+    
+
+}
+@media screen and (min-width: 520px) {
+    .model3-div-cont-practice-content{
+        display: flex;
+        flex-direction: row;
+    }
+    .model3-div-cont-play{
+        margin: 0;
+    }
+}
+
+//-----------------------------------------------------
+@media screen and (min-width: 1024px) {
+
+    .model3-div-cont-modelo1 {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        width: 700px;
+        max-width: 900px;
+        margin: 10px;
+    }
+
+    .model3-div-cont-canvas{
+        margin-right: 60px;
+    }
+
+    .model3-div-cont-configs {
+        max-width: 300px;
+        height: 10em;
+        justify-content: flex-end;
+    }
+
+    .model3-div-cont-part1 {
+
+        margin-bottom: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .home-div-cont-advertaisment {
+        height: 300px;
+        width: 20%;
+        max-width: 300px;
+    }
+
+    .model3-div-cont-practice-content{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .model3-div-cont-play{
+        margin: 0;
+        margin-left: 60px;
+    }
+    .model3-div-cont-info{
+        align-items: flex-start;
+    }
+    .model3-modelo-head{
+        width: 80%;
+    }
+}

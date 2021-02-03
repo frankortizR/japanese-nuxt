@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dubai'
+}
+
+$color1:#EBE5DA;
+$color2:#022E40;
+$color3:#227373;
+$color4:#D93B3B;
+$color5:#F27A5E;
+$color6:#4CA61C;
+$color7:#25D958;
+$color8:#0A8C2F;
+$color9:#3BD967;
+
+
+
+//import modules
+
+//normalize
+@import '../node_modules/normalize.css/normalize.css';
+
+//Default
+@import 'Default/skin';
+@import 'Default/skeleton';
+
+//home
+@import 'home/skin';
+@import 'home/skeleton';
+
+//navbar
+@import 'navbar/skin';
+@import 'navbar/skeleton';
+
+//Cfooter
+@import 'Cfooter/skin';
+@import 'Cfooter/skeleton';
+
+//Model1
+@import 'Model1/skin';
+@import 'Model1/skeleton'; 
+
+//Dropdown
+@import 'Dropdown/skin';
+@import 'Dropdown/skeleton';
+
+//About
+@import 'About/skin';
+@import 'About/skeleton';
+
+//Model2
+@import 'Model2/skin';
+@import 'Model2/skeleton';
+
+//Model3
+@import 'Model3/skin';
+@import 'Model3/skeleton'; 

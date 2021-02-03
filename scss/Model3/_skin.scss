@@ -1,0 +1,162 @@
+.model3-div-cont-part1 {
+    background-color: $color1;
+}
+
+.model3-div-cont-modelo1 {
+    background: none;
+}
+
+.model3-text {
+    color: $color2;
+}
+
+.model3-text-description {
+    color: $color3;
+}
+
+//styles de parte de practica
+.model3-icono-play {
+    border-style: solid;
+    border-radius: 5px;
+    text-decoration: none;
+    border-color: $color2;
+    border-width: 2px;
+    background-color: $color1
+}
+
+.model3-reproducir {
+    color: $color3;
+}
+
+.model3-boton-practica-conromaji {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: $color3;
+    text-align: center;
+}
+
+.model3-boton-practica-auto {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: $color3;
+    text-align: center;
+}
+
+.model3-texto-practica {
+    font-size: 100%;
+    color: $color3;
+}
+
+.model3-pressed {
+    background-color: $color5;
+    color: $color1;
+}
+
+.model3-boton-practica-automodel3-pressed {
+    width: 100%;
+    margin: 15px 0 15px;
+    padding-top: 5px;
+    background-color: $color5;
+    font-size: 20px;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: $color3;
+    text-align: center;
+    color: white;
+}
+
+.model3-boton-practica-automodel3-pressed {
+    cursor: pointer;
+}
+.opttrue {
+    background-color: $color5;
+    color: $color1;
+}
+
+//style show answer
+.model3-texto-show {
+    border-color: $color3;
+    color: $color2;
+}
+
+.model3-boton-next {
+    border-color: $color3;
+}
+
+.model3-texto-practica-dinamic {
+    color: $color2;
+}
+
+.model3-div-cont-progresbar {
+    background-color: $color2;
+}
+
+.model3-div-cont-progresbar span {
+    background-color: $color5;
+}
+
+.model3-boton-practica-mute {
+    border-style: solid;
+    border-color: $color3;
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+//-------------------- SELECTOR DE CARACTER
+
+.model3-div-cont-selectorchar {
+    width: 250px;
+    height: 70px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.model3-div-cont-char {
+    border: 2px solid $color2;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    width: 25%;
+    height: 80%;
+    transition: box-shadow 0.3s;
+    -webkit-transition: box-shadow 0.3s;
+    -moz-transition: box-shadow 0.3s;
+    -ms-transition: box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s;
+}
+
+.model3-div-cont-char:hover {
+    cursor: pointer;
+    box-shadow: 1px 2px 2px;
+    ;
+}
+
+.char-select-true {
+    background-color: #23a19d;
+}
+
+.char-right-true {
+    background-color: $color9;
+}
+
+.char-right-wrong {
+    background-color: $color4;
+}
