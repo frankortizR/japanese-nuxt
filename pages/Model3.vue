@@ -65,46 +65,36 @@
         </div>
 
         <div class="model3-div-cont-selectorchar">
+         
           <img
-            v-on:click="caracterelecgido"
-            :src="this.hiraganaC[charsOpt[2]]"
-            id="model3_char3"
+            @click="theselected2(2)"
             :class="
               'model3-div-cont-char char-select-' +
-              this.select[2] +
+              computedChoosenChar2 +
               ' char-right-' +
-              answear[2]
-            "
-          />
-          <img
-            @click="palacasa2"
-            :class="
-              'model3-div-cont-char char-select-' +
-              test +
-              ' char-right-' +
-              answear[2]
+              computedAnswer2
             "
             :src="this.hiraganaC[charsOpt[2]]"
             alt="none"
           />
           <img
-            @click="palacasa1"
+            @click="theselected1(1)"
             :class="
               'model3-div-cont-char char-select-' +
-              test1 +
+              computedChoosenChar1 +
               ' char-right-' +
-              answear[1]
+              computedAnswer1
             "
             :src="this.hiraganaC[charsOpt[1]]"
             alt="none"
           />
           <img
-            @click="palacasa0"
+            @click="theselected0(0)"
             :class="
               'model3-div-cont-char char-select-' +
-              test0 +
+              computedChoosenChar0 +
               ' char-right-' +
-              answear[0]
+              computedAnswer0
             "
             :src="this.hiraganaC[charsOpt[0]]"
             alt="none"
@@ -206,6 +196,9 @@ export default {
       test: "shit",
       test1: "shit",
       test0: "shit",
+      resresponse0:'shit',
+      resresponse1:'shit',
+      resresponse2:'shit',
       numerodeBuenas: 0,
       numerodeMalas: 0,
       showGrats: ["false", "false"],
@@ -392,6 +385,26 @@ export default {
       this.selected = payload;
       console.log(this.select[payload]);
     },
+    //--- Caracteres elegidos
+    computedChoosenChar0: function(){
+      return this.test0;
+    },
+    computedChoosenChar1: function(){
+      return this.test1
+    },
+    computedChoosenChar2: function(){
+      return this.test
+    },
+    //----- Respuestas
+    computedAnswer0: function(){
+      return this.resresponse0;
+    },
+    computedAnswer1: function(){
+      return this.resresponse1;
+    },
+    computedAnswer2: function(){
+      return this.resresponse2;
+    },
   },
   watch: {
     hidenRomaji: function (val) {
@@ -411,12 +424,12 @@ export default {
     nextOneEx(control) {
       this.index = Math.floor(Math.random() * (1 + 45 - 0) + 0);
       this.asignIndex();
-      this.select[0] = false;
-      this.select[1] = false;
-      this.select[2] = false;
-      this.answear[0] = false;
-      this.answear[1] = false;
-      this.answear[2] = false;
+      this.test = 'shit';
+      this.test1 = 'shit';
+      this.test0 = 'shit';
+      this.resresponse2 = 'shit';
+      this.resresponse1 = 'shit';
+      this.resresponse0 = 'shit';
       this.selected = null;
       this.showAd = "hide";
       this.showAs = "";
@@ -461,9 +474,15 @@ export default {
       if (control == true) this.progres = "model3-start";
       if (this.selected == this.charRight) {
         this.answear[this.selected] = "true";
+        if(this.selected == 0) this.resresponse0 = this.answear[this.selected];
+        if(this.selected == 1) this.resresponse1 = this.answear[this.selected];
+        if(this.selected == 2) this.resresponse2 = this.answear[this.selected];
         this.progressTaskFunction(true);
       } else {
         this.answear[this.selected] = "wrong";
+        if(this.selected == 0) this.resresponse0 = this.answear[this.selected];
+        if(this.selected == 1) this.resresponse1 = this.answear[this.selected];
+        if(this.selected == 2) this.resresponse2 = this.answear[this.selected];
         this.progressTaskFunction(false);
       }
       //---  copmprobador de resultados
@@ -536,16 +555,6 @@ export default {
         this.charsOpt[indexchar1] == this.charsOpt[indexchar3]
       );
     },
-    caracterelecgido(payload) {
-      this.select[0] = "false";
-      this.select[1] = "false";
-      this.select[2] = "false";
-      console.log(this.select[1]);
-      console.log("se ejecuto selcted char con index " + payload);
-      this.select[1] = "true";
-      this.selected = payload;
-      console.log(this.select[1]);
-    },
     romajiChecker(val) {
       if (val == false) {
         this.showRs = "hide";
@@ -555,15 +564,23 @@ export default {
         this.showRd = "hide";
       }
     },
-    palacasa2() {
-      console.log(this.select);
+    theselected2(payload) {
+      this.test0 = "shit";
+      this.test1 = "shit";
       this.test = "true";
+      this.selected = payload;
     },
-    palacasa1() {
+    theselected1(payload) {
+      this.test0 = "shit";
+      this.test = "shit";
       this.test1 = "true";
+      this.selected = payload;
     },
-    palacasa0() {
+    theselected0(payload) {
+      this.test1 = "shit";
+      this.test = "shit";
       this.test0 = "true";
+      this.selected = payload;
     },
   },
   mounted() {
