@@ -326,7 +326,7 @@ export default {
         require("../assets/img/hiragana/wo.svg"),
         require("../assets/img/hiragana/n.svg"),
       ],
-      player: new Audio(),
+      player: null,
       index: Math.floor(Math.random() * (1 + 45 - 0) + 0),
     };
   },
@@ -342,6 +342,7 @@ export default {
     playSound() {
       if (this.muted == true) {
       } else this.player.play();
+      
     },
 
     nextOnePressed() {
@@ -359,11 +360,11 @@ export default {
           this.showAnsEx(autowasactive);
         }, 4000);
       }
-      if (this.muted == true) {
-      } else this.player.play();
+      this.playSound();
     },
 
     asignIndex() {
+      this.player = new Audio();
       this.player.src = this.hiraganaS[this.index];
       let conRomaji = document.getElementById("dinamico-romaji");
       conRomaji.innerHTML = this.hiraganaR[this.index];
@@ -419,8 +420,10 @@ export default {
     
   },
   beforeUnmount() {
+    
     clearInterval(this.interval);
     clearInterval(this.interval - 1);
   },
+ 
 };
 </script>

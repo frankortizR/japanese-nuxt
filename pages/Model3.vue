@@ -117,7 +117,7 @@
           <div :class="'model3-div-imagen-answear ' + this.showAd">
             <img
               class="model3-imagen-answear"
-              :src="this.hiraganaC[index]"
+              :src="charinAns"
               alt="letra-a-hiragana"
             />
           </div>
@@ -193,6 +193,7 @@ export default {
   },
   data() {
     return {
+      charinAns:null,
       test: "shit",
       test1: "shit",
       test0: "shit",
@@ -220,7 +221,7 @@ export default {
       interval: Number,
       canvas_with: 120,
       canvas_height: 120,
-      charsOpt: [3],
+      charsOpt: [],
       ProgresTasks: [],
       indexProgresTasks: 0,
       iconPlay: require("../assets/img/icons/play.svg"),
@@ -289,7 +290,7 @@ export default {
         "Su",
         "Se",
         "So",
-        "Ya",
+        "Ta",
         "Chi",
         "Tsu",
         "Te",
@@ -369,22 +370,13 @@ export default {
         require("../assets/img/hiragana/wo.svg"),
         require("../assets/img/hiragana/n.svg"),
       ],
-      player: new Audio(),
+      player: null,
       index: Math.floor(Math.random() * (1 + 45 - 0) + 0),
     };
   },
   computed: {
     ...mapState(["muted", "hidenRomaji"]),
-    selectedCharEx: function (payload) {
-      this.select[0] = false;
-      this.select[1] = false;
-      this.select[2] = false;
-      console.log(this.select[payload]);
-      console.log("se ejecuto selcted char con index " + payload);
-      this.select[payload] = !this.select[payload];
-      this.selected = payload;
-      console.log(this.select[payload]);
-    },
+    
     //--- Caracteres elegidos
     computedChoosenChar0: function(){
       return this.test0;
@@ -424,6 +416,7 @@ export default {
     nextOneEx(control) {
       this.index = Math.floor(Math.random() * (1 + 45 - 0) + 0);
       this.asignIndex();
+      this.insertChars();
       this.test = 'shit';
       this.test1 = 'shit';
       this.test0 = 'shit';
@@ -444,10 +437,11 @@ export default {
     },
 
     asignIndex() {
+      this.player = new Audio();
       this.player.src = this.hiraganaS[this.index];
       let conRomaji = document.getElementById("dinamico-romaji");
       conRomaji.innerHTML = this.hiraganaR[this.index];
-      this.insertChars();
+      this.charinAns = this.hiraganaC[this.index];
     },
 
     showAnsPressed() {
@@ -529,6 +523,7 @@ export default {
       }
     },
     insertChars() {
+
       let indexchar1 = Math.floor(Math.random() * (1 + 2 - 0) + 0);
       let indexchar2;
       let indexchar3;
@@ -587,12 +582,12 @@ export default {
     this.asignIndex();
     this.romajiChecker(this.hidenRomaji);
   },
+  beforeMount() {
+    this.insertChars();
+  },
   beforeUnmount() {
     clearInterval(this.interval);
     clearInterval(this.interval - 1);
-  },
-  created() {
-    this.insertChars();
   },
 };
 </script>
