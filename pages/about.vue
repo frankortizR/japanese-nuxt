@@ -1,6 +1,6 @@
 <template>
   <div class="about-div-cont-padre">
-    <div class="about-div-cont-info">
+    <div :class="'about-div-cont-info dm_t1_'+darkmode">
       <h1>Acerca de nosotros</h1>
       <div class="about-div-cont-mision space-text">
         <h2>Misión</h2>
@@ -37,12 +37,16 @@
 <script>
 import Navbar from "../components/Navbar.vue";
 import Cfooter from "../components/Footer.vue";
+import { mapState } from "vuex";
 
 export default {
   name:"About",
   components:{
     Navbar,
     Cfooter
-  }
+  },
+  computed: {
+    ...mapState(["muted", "darkmode"]),
+  },
 }
 </script>

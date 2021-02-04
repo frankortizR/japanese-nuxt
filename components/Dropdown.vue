@@ -12,12 +12,14 @@
     </router-link>
     <div class="d-link">
       <svg class="drop-icono-opt drop-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M 20 10 a 10 10 0 1 1 -20 0 a 10 10 0 0 1 20 0 Z M 10 2 a 8 8 0 1 0 0 16 a 8 8 0 0 0 0 -16 Z m -0.7 10.54 L 5.75 9 l 1.41 -1.41 L 10 10.4 l 2.83 -2.82 L 14.24 9 L 10 13.24 l -0.7 -0.7 Z" /></svg>
-      Opciones
+      <input type="button" value="">
     </div>
   </div>
 </template>
 
 <script>
+
+
 export default {
   name: "Dropdown",
   

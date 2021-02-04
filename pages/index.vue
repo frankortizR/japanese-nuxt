@@ -4,7 +4,7 @@
     <div class="home-parte1">
       <div class="home-div-cont-menu">
         <div class="titulo-principal">
-          <h1 class="title">Practica de Hiragana</h1>
+          <h1 :class="'title dm_t1_'+darkmode">Practica de Hiragana</h1>
         </div>
         <div class="model1-div-cont-adver">
           <div class="home-div-cont-modelos">
@@ -87,6 +87,7 @@
 
   import Navbar from "../components/Navbar.vue";
   import Cfooter from "../components/Footer";
+  import { mapState } from "vuex";
 
   export default {
     name: "Home",
@@ -101,5 +102,8 @@
         bookmodelIcon: require("../assets/img/icons/open-book.svg"),
       };
     },
+    computed: {
+    ...mapState(["darkmode"]),
+  },
   };
 </script>

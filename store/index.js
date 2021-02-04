@@ -1,28 +1,11 @@
-//import { createStore } from 'vuex'
+
 import Vuex from 'vuex'
-/* 
-new Vuex.Store({
-  state: {
-    muted: false,
-    hidenRomaji: false,
-  },
-  mutations: {
-    muteSound(state){
-      state.muted = !state.muted;
-    },
-    storeHideRomaji(state){
-      state.hidenRomaji = !state.hidenRomaji;
-    }
-  },
-  actions: {
-  },
-  modules: {
-  }
-}) */
+
 
 export const state = () => ({
   muted: false,
   hidenRomaji: false,
+  darkmode:false,
 })
 
 export const mutations = {
@@ -31,6 +14,9 @@ export const mutations = {
   },
   storeHideRomaji(state){
     state.hidenRomaji = !state.hidenRomaji;
+  },
+  storeDarkmode(state){
+    state.darkmode = !state.darkmode;
   }
 }
 

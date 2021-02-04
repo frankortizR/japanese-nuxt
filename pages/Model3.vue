@@ -2,17 +2,17 @@
   <div class="model3-div-cont-part1">
     <div class="model3-div-cont-beforeadver">
       <div class="titulo-principal">
-        <h1 class="title">Práctica de Hiragana</h1>
+        <h1 :class="'title dm_t1_'+darkmode">Práctica de Hiragana</h1>
       </div>
 
       <div class="model3-div-cont-modelo1">
         <div class="model3-div-cont-info">
           <div class="model3-modelo-head">
-            <h3 class="model3-modelo-title model3-text">Modelo B</h3>
+            <h3 :class="'model3-modelo-title model3-text dm_t1_'+darkmode">Modelo B</h3>
             <img class="model3-icon-target" :src="targetmodelIcon" alt="" />
           </div>
 
-          <ul class="modelo1-modelo-description model3-text-description">
+          <ul :class="'modelo1-modelo-description model3-text-description dm_t1_'+darkmode">
             <li>Selecciona el caracter correcto</li>
             <br />
             <li>3 opciones para elegir</li>
@@ -23,7 +23,7 @@
         </div>
         <div class="model3-div-cont-configs">
           <div
-            :class="'model3-boton-practica-auto' + this.emptyA"
+            :class="'model3-boton-practica-auto' + this.emptyA+' dm_border_'+darkmode"
             v-on:click="autoPressed"
           >
             <strong> Start Auto </strong>
@@ -55,12 +55,12 @@
           </div>
           <div class="model3-div-cont-play">
             <img
-              class="model3-icono-play"
+              :class="'model3-icono-play dm_b2_'+darkmode"
               v-on:click="playSound"
               :src="iconPlay"
               alt="icono-play"
             />
-            <h3 class="model3-reproducir">Pronunciación</h3>
+            <h3 :class="'model3-reproducir dm_t1_'+darkmode">Pronunciación</h3>
           </div>
         </div>
 
@@ -83,7 +83,7 @@
               'model3-div-cont-char char-select-' +
               computedChoosenChar1 +
               ' char-right-' +
-              computedAnswer1
+              computedAnswer1 
             "
             :src="this.hiraganaC[charsOpt[1]]"
             alt="none"
@@ -108,13 +108,13 @@
 
       <div class="model3-div-cont-answer">
         <div class="model3-div-cont-show">
-          <div class="model3-texto-show" v-on:click="showAnsPressed">
+          <div :class="'model3-texto-show dm_b2_'+darkmode+' dm_t2_'+darkmode" v-on:click="showAnsPressed">
             Mostrar respuesta
           </div>
           <div :class="'model3-icono-show ' + this.showAs">
-            <h3 class="model-icono-noshow">?</h3>
+            <h3 :class="'model-icono-noshow dm_t1_'+darkmode">?</h3>
           </div>
-          <div :class="'model3-div-imagen-answear ' + this.showAd">
+          <div :class="'model3-div-imagen-answear ' + this.showAd+' dm_b2_'+darkmode">
             <img
               class="model3-imagen-answear"
               :src="charinAns"
@@ -123,44 +123,44 @@
           </div>
         </div>
 
-        <div class="model3-div-cont-progresbar">
-          <span :class="progres"></span>
+        <div :class="'model3-div-cont-progresbar dm_pbo_'+darkmode">
+          <span :class="progres+' dm_pbi_'+darkmode"></span>
         </div>
 
-        <div class="model3-boton-next" v-on:click="nextOnePressed">
-          <p class="model3-boton-next-text">Next</p>
+        <div :class="'model3-boton-next dm_b2_'+darkmode" v-on:click="nextOnePressed">
+          <p :class="'model3-boton-next-text dm_t1_'+darkmode">Next</p>
         </div>
 
         <div class="model3-div-cont-progress-task">
           <div
-            :class="'model3_progress_task_box char-right-' + ProgresTasks[0]"
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[0] + ' dm_border_'+darkmode"
           ></div>
           <div
-            :class="'model3_progress_task_box char-right-' + ProgresTasks[1]"
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[1] + ' dm_border_'+darkmode"
           ></div>
           <div
-            :class="'model3_progress_task_box char-right-' + ProgresTasks[2]"
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[2] + ' dm_border_'+darkmode"
           ></div>
           <div
-            :class="'model3_progress_task_box char-right-' + ProgresTasks[3]"
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[3] + ' dm_border_'+darkmode"
           ></div>
           <div
-            :class="'model3_progress_task_box char-right-' + ProgresTasks[4]"
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[4] + ' dm_border_'+darkmode"
           ></div>
           <div
-            :class="'model3_progress_task_box char-right-' + ProgresTasks[5]"
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[5] + ' dm_border_'+darkmode"
           ></div>
           <div
-            :class="'model3_progress_task_box char-right-' + ProgresTasks[6]"
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[6] + ' dm_border_'+darkmode"
           ></div>
           <div
-            :class="'model3_progress_task_box char-right-' + ProgresTasks[7]"
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[7] + ' dm_border_'+darkmode"
           ></div>
           <div
-            :class="'model3_progress_task_box char-right-' + ProgresTasks[8]"
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[8] + ' dm_border_'+darkmode"
           ></div>
           <div
-            :class="'model3_progress_task_box char-right-' + ProgresTasks[9]"
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[9] + ' dm_border_'+darkmode"
           ></div>
         </div>
 
@@ -375,7 +375,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(["muted", "hidenRomaji"]),
+    ...mapState(["muted", "hidenRomaji", "darkmode"]),
     
     //--- Caracteres elegidos
     computedChoosenChar0: function(){

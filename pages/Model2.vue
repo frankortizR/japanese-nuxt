@@ -4,17 +4,17 @@
     <div class="model2-div-cont-beforeadver">
 
       <div class="titulo-principal">
-        <h1 class="title">Práctica de Hiragana</h1>
+        <h1 :class="'title dm_t1_'+darkmode">Práctica de Hiragana</h1>
       </div>
 
       <div class="model2-div-cont-modelo1 ">
         <div class="model2-div-cont-info">
           <div class="model2-modelo-head">
-            <h3 class="model2-modelo-title model2-text">Modelo A</h3>
+            <h3 :class="'model2-modelo-title model2-text dm_t1_'+darkmode">Modelo A</h3>
             <img class="model2-stylus-icon" :src="stylusmoodelIcon" alt="">
           </div>
           
-            <ul class="modelo1-modelo-description model2-text-description">
+            <ul :class="'modelo1-modelo-description model2-text-description dm_t1_'+darkmode">
               <li>Practica de la escritura</li><br>
               <li>Campo de escritura en pantalla</li><br>
               <li>Con Stylus mouse o touch </li><br>
@@ -23,7 +23,7 @@
           
         </div>
         <div class="model2-div-cont-configs">
-          <div :class="'model2-boton-practica-auto' + this.emptyA" v-on:click="autoPressed">
+          <div :class="'model2-boton-practica-auto' + this.emptyA+' dm_border_'+darkmode" v-on:click="autoPressed">
             <strong>
               Start Auto
             </strong>
@@ -43,16 +43,16 @@
 
       <div class="model2-div-cont-practice">
         <div class="model2-div-cont-canvas">
-          <canvas id="model2-mycanvas" :width="canvas_with" :height="canvas_height"
+          <canvas :class="'canvasIndid dm_b4_'+darkmode" id="model2-mycanvas" :width="canvas_with" :height="canvas_height"
             style="min-width: 120px; min-height: 120px;" />
-          <div class="model2-boton-clear-canvas" @click="clearCanvas">Clear</div>
+          <div :class="'model2-boton-clear-canvas dm_b2_'+darkmode+' dm_t2_'+darkmode" @click="clearCanvas">Clear</div>
         </div>
         <div class="model2-div-cont-practice-content">
           <div class="model2-div-cont-play">
 
-            <img class="model2-icono-play" v-on:click="playSound" :src="iconPlay" alt="icono-play">
+            <img :class="'model2-icono-play dm_b2_'+darkmode" v-on:click="playSound" :src="iconPlay" alt="icono-play">
 
-            <h3 class="model2-reproducir">Pronunciación</h3>
+            <h3 :class="'model2-reproducir dm_t1_'+darkmode">Pronunciación</h3>
           </div>
           <div class="model2-div-cont-practica-conromaji">
             <!-- <div :class="'model2-boton-practica-conromaji ' + this.emptyR" v-on:click="pRomaji">
@@ -60,10 +60,10 @@
             </div> -->
             <div class="model2-div-cont-practica">
               <div class="model2-texto-practica" :class="this.showRs">
-                <h3 class="model2-texto-practica-static">abc</h3>
+                <h3 :class="'model2-texto-practica-static dm_t1_'+darkmode">abc</h3>
               </div>
               <div class="model2-texto-practica-dinamic" :class="this.showRd">
-                <h3 id="dinamico-romaji"></h3>
+                <h3 :class="'dm_t1_'+darkmode" id="dinamico-romaji"></h3>
               </div>
             </div>
           </div>
@@ -76,23 +76,23 @@
 
       <div class="model2-div-cont-answer">
         <div class="model2-div-cont-show">
-          <div class="model2-texto-show" v-on:click="showAnsPressed">
+          <div :class="'model2-texto-show dm_b2_'+darkmode+' dm_t2_'+darkmode" v-on:click="showAnsPressed">
             Mostrar respuesta
           </div>
           <div :class="'model2-icono-show ' + this.showAs">
-            <h3 class="model-icono-noshow">?</h3>
+            <h3 :class="'model-icono-noshow dm_t1_'+darkmode">?</h3>
           </div>
           <div :class="'model2-div-imagen-answear ' + this.showAd">
-            <img class="model2-imagen-answear" :src="this.hiraganaC[index]" alt="letra-a-hiragana" />
+            <img :class="'model2-imagen-answear dm_b3_'+darkmode" :src="this.hiraganaC[index]" alt="letra-a-hiragana" />
           </div>
         </div>
 
-        <div class="model2-div-cont-progresbar">
-          <span :class="progres"></span>
+        <div :class="'model2-div-cont-progresbar dm_pbo_'+darkmode">
+          <span :class="progres+' dm_pbi_'+darkmode"></span>
         </div>
 
-        <div class="model2-boton-next" v-on:click="nextOnePressed">
-          <p class="model2-boton-next-text">Next</p>
+        <div :class="'model2-boton-next dm_b2_'+darkmode" v-on:click="nextOnePressed">
+          <p :class="'model2-boton-next-text dm_t1_'+darkmode">Next</p>
         </div>
       </div>
     </div>
@@ -280,7 +280,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(["muted", "hidenRomaji"]),
+    ...mapState(["muted", "hidenRomaji", "darkmode"]),
   },
   watch: {
     hidenRomaji: function (val) {

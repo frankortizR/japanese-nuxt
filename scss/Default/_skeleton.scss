@@ -1,3 +1,17 @@
-#__layout{
+/* #__layout{
     background-color: $color1;
 }
+ */
+
+ .default_layout{
+    background-color: $color1;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+}
+
+ .dm_b1_true{
+     background-color: $color2;
+ }

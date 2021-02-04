@@ -101,7 +101,7 @@
     background-color: $color2;
 }
 
-.model2-div-cont-progresbar span {
+.dm_pbi_false{
     background-color: $color5;
 }
 
@@ -122,7 +122,7 @@
     flex-wrap: wrap;
 }
 
-#model2-mycanvas{
+.canvasIndid{
     border: 2px solid $color2;
     border-radius: 5px;   
 }
@@ -146,8 +146,8 @@
 }
 
 .model2-boton-clear-canvas:hover{
-    -webkit-box-shadow: 1px 2px 2px;
-            box-shadow: 1px 2px 2px;
+    -webkit-box-shadow: 1px 2px 2px black;
+            box-shadow: 1px 2px 2px black;
     cursor: pointer;
 }
 

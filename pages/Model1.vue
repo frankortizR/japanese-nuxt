@@ -3,17 +3,17 @@
     <div class="model1-div-cont-beforeadver">
 
       <div class="titulo-principal">
-          <h1 class="title">Práctica de Hiragana</h1>
+          <h1 :class="'title dm_t1_'+darkmode">Práctica de Hiragana</h1>
         </div>
 
     <div class="model1-div-cont-modelo1 ">
       <div class="model1-div-cont-info">
         <div class="model1-modelo-head">
-          <h3 class="model1-modelo-title model1-text">Modelo C</h3>
+          <h3 :class="'model1-modelo-title model1-text dm_t1_'+darkmode">Modelo C</h3>
           <img class="model1-book-icon" :src="bookmodelIcon" alt="">
         </div>
         
-          <ul class="modelo1-modelo-description model1-text-description">
+          <ul :class="'modelo1-modelo-description model1-text-description dm_t1_'+darkmode">
                     <li>Practica de la escritura </li><br>
                     <li>En su cuaderno escriba la letra correspondiente</li><br>
                     <li>Compare respuesta con la visualiuzacion</li><br>
@@ -23,7 +23,7 @@
       </div>
       <div class="model1-div-cont-configs">
       <div
-        :class="'model1-boton-practica-auto' + this.emptyA"
+        :class="'model1-boton-practica-auto' + this.emptyA +' dm_border_'+darkmode"
         v-on:click="autoPressed"
       >
       <strong>
@@ -44,10 +44,10 @@
     <div class="model1-div-cont-practice">
       <div class="model1-div-cont-play">
         
-          <img class="model1-icono-play" v-on:click="playSound" :src="iconPlay" alt="icono-play">
+          <img :class="'model1-icono-play dm_b2_'+darkmode" v-on:click="playSound" :src="iconPlay" alt="icono-play">
           
         
-        <h3 class="model1-reproducir">Pronunciación</h3>
+        <h3 :class="'model1-reproducir dm_t1_'+darkmode">Pronunciación</h3>
       </div>
       <div class="model1-div-cont-practica-conromaji">
        <!--  <div
@@ -63,7 +63,7 @@
             <h3 class="model1-texto-practica-static">abc</h3>
           </div>
           <div class="model1-texto-practica-dinamic" :class="this.showRd">
-            <h3 id="dinamico-romaji"></h3>
+            <h3 :class="'dm_t1_'+darkmode" id="dinamico-romaji"></h3>
           </div>
         </div>
       </div>
@@ -73,13 +73,13 @@
 
     <div class="model1-div-cont-answer">
       <div class="model1-div-cont-show">
-        <div class="model1-texto-show" v-on:click="showAnsPressed">
+        <div :class="'model1-texto-show dm_b2_'+darkmode+' dm_t2_'+darkmode" v-on:click="showAnsPressed">
           Mostrar respuesta
         </div>
         <div :class="'model1-icono-show ' + this.showAs">
-          <h3 class="model-icono-noshow">?</h3>
+          <h3 :class="'model-icono-noshow dm_t1_'+darkmode">?</h3>
         </div>
-        <div :class="'model1-div-imagen-answear ' + this.showAd">
+        <div :class="'model1-div-imagen-answear ' + this.showAd +' dm_b3_'+darkmode">
           <img
             class="model1-imagen-answear"
             :src="this.hiraganaC[index]"
@@ -88,12 +88,12 @@
         </div>
       </div>
 
-      <div class="model1-div-cont-progresbar">
-        <span :class="progres"></span>
+      <div :class="'model1-div-cont-progresbar dm_pbo_'+darkmode">
+        <span :class="progres+' dm_pbi_'+darkmode"></span>
       </div>
 
-      <div class="model1-boton-next" v-on:click="nextOnePressed">
-        <p class="model1-boton-next-text">Next</p>
+      <div :class="'model1-boton-next dm_b2_'+darkmode" v-on:click="nextOnePressed">
+        <p :class="'model1-boton-next-text dm_t1_'+darkmode">Next</p>
       </div>
     </div>
     </div>
@@ -109,7 +109,7 @@ import Navbar from "../components/Navbar.vue";
 import Cfooter from "../components/Footer.vue";
 import { mapState } from "vuex";
 
-export default {
+  export default {
   name: "Model1",
   components: {
     Navbar,
@@ -131,57 +131,7 @@ export default {
       interval: Number,
       iconPlay: require("../assets/img/icons/play.svg"),
       bookmodelIcon: require("../assets/img/icons/open-book.svg"),
-      /* hiraganaS2:[
-        new Audio(require('../assets/audio/hiragana/a.mp3')),
-        new Audio(require('../assets/audio/hiragana/i.mp3')),
-        new Audio(require('../assets/audio/hiragana/u.mp3')),
-        new Audio(require('../assets/audio/hiragana/e.mp3')),
-        new Audio(require('../assets/audio/hiragana/o.mp3')),
-        new Audio(require('../assets/audio/hiragana/ka.mp3')),
-        new Audio(require('../assets/audio/hiragana/ki.mp3')),
-        new Audio(require('../assets/audio/hiragana/ku.mp3')),
-        new Audio(require('../assets/audio/hiragana/ke.mp3')),
-        new Audio(require('../assets/audio/hiragana/ko.mp3')),
-        new Audio(require('../assets/audio/hiragana/sa.mp3')),
-        new Audio(require('../assets/audio/hiragana/shi.mp3')),
-        new Audio(require('../assets/audio/hiragana/su.mp3')),
-        new Audio(require('../assets/audio/hiragana/se.mp3')),
-        new Audio(require('../assets/audio/hiragana/so.mp3')),
-        new Audio(require('../assets/audio/hiragana/ta.mp3')),
-        new Audio(require('../assets/audio/hiragana/chi.mp3')),
-        new Audio(require('../assets/audio/hiragana/tsu.mp3')),
-        new Audio(require('../assets/audio/hiragana/te.mp3')),
-        new Audio(require('../assets/audio/hiragana/to.mp3')),
-        new Audio(require('../assets/audio/hiragana/na.mp3')),
-        new Audio(require('../assets/audio/hiragana/ni.mp3')),
-        new Audio(require('../assets/audio/hiragana/nu.mp3')),
-        new Audio(require('../assets/audio/hiragana/ne.mp3')),
-        new Audio(require('../assets/audio/hiragana/no.mp3')),
-        new Audio(require('../assets/audio/hiragana/ha.mp3')),
-        new Audio(require('../assets/audio/hiragana/hi.mp3')),
-        new Audio(require('../assets/audio/hiragana/fu.mp3')),
-        new Audio(require('../assets/audio/hiragana/he.mp3')),
-        new Audio(require('../assets/audio/hiragana/ho.mp3')),
-        new Audio(require('../assets/audio/hiragana/ma.mp3')),
-        new Audio(require('../assets/audio/hiragana/mi.mp3')),
-        new Audio(require('../assets/audio/hiragana/mu.mp3')),
-        new Audio(require('../assets/audio/hiragana/me.mp3')),
-        new Audio(require('../assets/audio/hiragana/mo.mp3')),
-        new Audio(require('../assets/audio/hiragana/ia.mp3')),
-        
-        new Audio(require('../assets/audio/hiragana/iu.mp3')),
-        
-        new Audio(require('../assets/audio/hiragana/io.mp3')),
-        new Audio(require('../assets/audio/hiragana/ra.mp3')),
-        new Audio(require('../assets/audio/hiragana/ri.mp3')),
-        new Audio(require('../assets/audio/hiragana/ru.mp3')),
-        new Audio(require('../assets/audio/hiragana/re.mp3')),
-        new Audio(require('../assets/audio/hiragana/ro.mp3')),
-        new Audio(require('../assets/audio/hiragana/wa.mp3')),
-        
-        new Audio(require('../assets/audio/hiragana/wo.mp3')),
-        new Audio(require('../assets/audio/hiragana/n.mp3')),
-        ], */
+    
       hiraganaS: [
         require('../static/audio/hiragana/a.mp3'),
         require("../static/audio/hiragana/i.mp3"),
@@ -331,7 +281,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(["muted", "hidenRomaji"]),
+    ...mapState(["muted", "hidenRomaji", "darkmode"]),
   },
   watch: {
     hidenRomaji: function (val) {
