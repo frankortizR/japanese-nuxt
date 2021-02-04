@@ -1,31 +1,32 @@
 <template>
-  
   <div class="model3-div-cont-part1">
     <div class="model3-div-cont-beforeadver">
-
       <div class="titulo-principal">
         <h1 class="title">Práctica de Hiragana</h1>
       </div>
 
-      <div class="model3-div-cont-modelo1 ">
+      <div class="model3-div-cont-modelo1">
         <div class="model3-div-cont-info">
           <div class="model3-modelo-head">
             <h3 class="model3-modelo-title model3-text">Modelo B</h3>
-            <img class="model3-icon-target" :src="targetmodelIcon" alt="">
+            <img class="model3-icon-target" :src="targetmodelIcon" alt="" />
           </div>
-          
-            <ul class="modelo1-modelo-description model3-text-description">
-              <li>Selecciona el caracter correcto</li><br>
-              <li>3 opciones para elegir</li><br>
-              <li>Compruebe su respuesta </li><br>
-            </ul>
-          
+
+          <ul class="modelo1-modelo-description model3-text-description">
+            <li>Selecciona el caracter correcto</li>
+            <br />
+            <li>3 opciones para elegir</li>
+            <br />
+            <li>Compruebe su respuesta</li>
+            <br />
+          </ul>
         </div>
         <div class="model3-div-cont-configs">
-          <div :class="'model3-boton-practica-auto' + this.emptyA" v-on:click="autoPressed">
-            <strong>
-            Start Auto
-            </strong>
+          <div
+            :class="'model3-boton-practica-auto' + this.emptyA"
+            v-on:click="autoPressed"
+          >
+            <strong> Start Auto </strong>
           </div>
           <!-- <div :class="'model3-boton-practica-mute opt' + this.mute" v-on:click="mute = !mute">
             Mute
@@ -40,7 +41,7 @@
       <div class="model3-div-cont-practice">
         <div class="model3-div-cont-practice-content">
           <div class="model3-div-cont-practica-conromaji">
-           <!--  <div :class="'model3-boton-practica-conromaji ' + this.emptyR" v-on:click="pRomaji">
+            <!--  <div :class="'model3-boton-practica-conromaji ' + this.emptyR" v-on:click="pRomaji">
               Ocultar Romaji
             </div> -->
             <div class="model3-div-cont-practica">
@@ -51,21 +52,63 @@
                 <h3 id="dinamico-romaji"></h3>
               </div>
             </div>
-            
           </div>
           <div class="model3-div-cont-play">
-            <img class="model3-icono-play" v-on:click="playSound" :src="iconPlay" alt="icono-play">
+            <img
+              class="model3-icono-play"
+              v-on:click="playSound"
+              :src="iconPlay"
+              alt="icono-play"
+            />
             <h3 class="model3-reproducir">Pronunciación</h3>
           </div>
         </div>
 
         <div class="model3-div-cont-selectorchar">
-          <img @click="selectedChar(0)" :src="this.hiraganaC[charsOpt[0]]" id="model3_char1"
-            :class="'model3-div-cont-char ' +'char-select-'+ this.select[0] +' char-right-'+ answear[0]" />
-          <img @click="selectedChar(1)" :src="this.hiraganaC[charsOpt[1]]" id="model3_char2"
-            :class="'model3-div-cont-char ' +'char-select-'+ this.select[1] +' char-right-'+ answear[1]" />
-          <img @click="selectedChar(2)" :src="this.hiraganaC[charsOpt[2]]" id="model3_char3"
-            :class="'model3-div-cont-char ' +'char-select-'+ this.select[2] +' char-right-'+ answear[2]" />
+          <img
+            v-on:click="caracterelecgido"
+            :src="this.hiraganaC[charsOpt[2]]"
+            id="model3_char3"
+            :class="
+              'model3-div-cont-char char-select-' +
+              this.select[2] +
+              ' char-right-' +
+              answear[2]
+            "
+          />
+          <img
+            @click="palacasa2"
+            :class="
+              'model3-div-cont-char char-select-' +
+              test +
+              ' char-right-' +
+              answear[2]
+            "
+            :src="this.hiraganaC[charsOpt[2]]"
+            alt="none"
+          />
+          <img
+            @click="palacasa1"
+            :class="
+              'model3-div-cont-char char-select-' +
+              test1 +
+              ' char-right-' +
+              answear[1]
+            "
+            :src="this.hiraganaC[charsOpt[1]]"
+            alt="none"
+          />
+          <img
+            @click="palacasa0"
+            :class="
+              'model3-div-cont-char char-select-' +
+              test0 +
+              ' char-right-' +
+              answear[0]
+            "
+            :src="this.hiraganaC[charsOpt[0]]"
+            alt="none"
+          />
         </div>
       </div>
 
@@ -82,7 +125,11 @@
             <h3 class="model-icono-noshow">?</h3>
           </div>
           <div :class="'model3-div-imagen-answear ' + this.showAd">
-            <img class="model3-imagen-answear" :src="this.hiraganaC[index]" alt="letra-a-hiragana" />
+            <img
+              class="model3-imagen-answear"
+              :src="this.hiraganaC[index]"
+              alt="letra-a-hiragana"
+            />
           </div>
         </div>
 
@@ -95,26 +142,51 @@
         </div>
 
         <div class="model3-div-cont-progress-task">
-          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[0]"></div>
-          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[1]"></div>
-          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[2]"></div>
-          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[3]"></div>
-          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[4]"></div>
-          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[5]"></div>
-          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[6]"></div>
-          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[7]"></div>
-          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[8]"></div>
-          <div :class="'model3_progress_task_box char-right-'+ProgresTasks[9]"></div>
+          <div
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[0]"
+          ></div>
+          <div
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[1]"
+          ></div>
+          <div
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[2]"
+          ></div>
+          <div
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[3]"
+          ></div>
+          <div
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[4]"
+          ></div>
+          <div
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[5]"
+          ></div>
+          <div
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[6]"
+          ></div>
+          <div
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[7]"
+          ></div>
+          <div
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[8]"
+          ></div>
+          <div
+            :class="'model3_progress_task_box char-right-' + ProgresTasks[9]"
+          ></div>
         </div>
 
-        <div :class="'model3_final_message model3_div_congrats_'+showGrats[0]"><h6> ¡¡Bien Hecho!!</h6></div>
-        <div :class="'model3_final_message model3_div_nograts_'+showGrats[1]"><h6>Mas práctica! :D</h6></div>
+        <div
+          :class="'model3_final_message model3_div_congrats_' + showGrats[0]"
+        >
+          <h6>¡¡Bien Hecho!!</h6>
+        </div>
+        <div :class="'model3_final_message model3_div_nograts_' + showGrats[1]">
+          <h6>Mas práctica! :D</h6>
+        </div>
       </div>
     </div>
 
     <div class="home-div-cont-advertaisment">Advertisment</div>
   </div>
-  
 </template>
 
 <script>
@@ -131,13 +203,16 @@ export default {
   },
   data() {
     return {
+      test: "shit",
+      test1: "shit",
+      test0: "shit",
       numerodeBuenas: 0,
       numerodeMalas: 0,
       showGrats: ["false", "false"],
       charRight: Number,
       answear: ["false", "false", "false"],
       selected: Number,
-      select: [],
+      select: ["false", "false", "false"],
       showRd: "",
       showRs: "hide",
       showAd: "hide",
@@ -307,6 +382,16 @@ export default {
   },
   computed: {
     ...mapState(["muted", "hidenRomaji"]),
+    selectedCharEx: function (payload) {
+      this.select[0] = false;
+      this.select[1] = false;
+      this.select[2] = false;
+      console.log(this.select[payload]);
+      console.log("se ejecuto selcted char con index " + payload);
+      this.select[payload] = !this.select[payload];
+      this.selected = payload;
+      console.log(this.select[payload]);
+    },
   },
   watch: {
     hidenRomaji: function (val) {
@@ -391,7 +476,7 @@ export default {
           this.showGrats[1] = "wrong";
           this.showGrats[0] = "false";
         }
-        if(this.auto == true) this.autoPressed();
+        if (this.auto == true) this.autoPressed();
       }
     },
     autoPressed() {
@@ -451,15 +536,15 @@ export default {
         this.charsOpt[indexchar1] == this.charsOpt[indexchar3]
       );
     },
-    selectedChar(index) {
-      this.select[0] = false;
-      this.select[1] = false;
-      this.select[2] = false;
-      console.log(this.select[index]);
-      console.log('se ejecuto selcted char con index '+index);
-      this.select[index] = !this.select[index];
-      this.selected = index;
-      console.log(this.select[index]);
+    caracterelecgido(payload) {
+      this.select[0] = "false";
+      this.select[1] = "false";
+      this.select[2] = "false";
+      console.log(this.select[1]);
+      console.log("se ejecuto selcted char con index " + payload);
+      this.select[1] = "true";
+      this.selected = payload;
+      console.log(this.select[1]);
     },
     romajiChecker(val) {
       if (val == false) {
@@ -470,6 +555,16 @@ export default {
         this.showRd = "hide";
       }
     },
+    palacasa2() {
+      console.log(this.select);
+      this.test = "true";
+    },
+    palacasa1() {
+      this.test1 = "true";
+    },
+    palacasa0() {
+      this.test0 = "true";
+    },
   },
   mounted() {
     this.asignIndex();
@@ -478,6 +573,9 @@ export default {
   beforeUnmount() {
     clearInterval(this.interval);
     clearInterval(this.interval - 1);
+  },
+  created() {
+    this.insertChars();
   },
 };
 </script>

@@ -149,8 +149,30 @@
     ;
 }
 
+.model3-div-cont-char:active{
+    border: solid $color5;
+}
+
+.prueba-shit{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.prueba-noshit{
+    background-color: $color9;
+}
+
 .char-select-true {
     background-color: #23a19d;
+}
+.char-select-right {
+    background-color:$color9;
+}
+.char-select-wrong {
+    background-color: $color4;
 }
 
 .char-right-true {
