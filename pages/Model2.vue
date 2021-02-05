@@ -44,7 +44,7 @@
       <div class="model2-div-cont-practice">
         <div class="model2-div-cont-canvas">
           <div class="model2_marca_deagua"></div>
-          <canvas :class="'canvasIndid dm_b4_'+darkmode" id="model2-mycanvas" :width="canvas_with" :height="canvas_height"
+          <canvas :class="'canvasIndid dm_border_'+darkmode" id="model2-mycanvas" :width="canvas_with" :height="canvas_height"
             style="min-width: 120px; min-height: 120px;">
           
             </canvas>
@@ -397,6 +397,7 @@ export default {
       let ctx = this.canvasm;
         ctx.beginPath();
         ctx.strokeStyle = "#022E40";
+        if(this.darkmode == true) ctx.strokeStyle = "#D93B3B";
         ctx.lineWidth = 4;
         ctx.lineCap = "bevel";
         ctx.moveTo(x1, y1);
