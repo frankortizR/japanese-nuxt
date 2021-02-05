@@ -60,7 +60,7 @@
         </div> -->
         <div class="model1-div-cont-practica">
           <div class="model1-texto-practica" :class="this.showRs">
-            <h3 class="model1-texto-practica-static">abc</h3>
+            <h3 :class="'model1-texto-practica-static dm_t1_'+darkmode">abc</h3>
           </div>
           <div class="model1-texto-practica-dinamic" :class="this.showRd">
             <h3 :class="'dm_t1_'+darkmode" id="dinamico-romaji"></h3>

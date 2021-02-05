@@ -43,8 +43,11 @@
 
       <div class="model2-div-cont-practice">
         <div class="model2-div-cont-canvas">
+          <div class="model2_marca_deagua"></div>
           <canvas :class="'canvasIndid dm_b4_'+darkmode" id="model2-mycanvas" :width="canvas_with" :height="canvas_height"
-            style="min-width: 120px; min-height: 120px;" />
+            style="min-width: 120px; min-height: 120px;">
+          
+            </canvas>
           <div :class="'model2-boton-clear-canvas dm_b2_'+darkmode+' dm_t2_'+darkmode" @click="clearCanvas">Clear</div>
         </div>
         <div class="model2-div-cont-practice-content">
@@ -359,6 +362,7 @@ export default {
       ctx2.clearRect(0, 0, this.canvas_with, this.canvas_height);
     },
     listenerGeneral() {
+      
       let x = 0;
       let y = 0;
       let isDrawing = false;

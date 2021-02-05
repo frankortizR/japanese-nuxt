@@ -15,12 +15,13 @@
         -ms-flex-pack: center;
             justify-content: center;
     -ms-flex-line-pack: center;
-        align-content: center;
+        align-items: center;
 }
 
 .d-link{
+    border-bottom: 2px solid $color1;
     text-decoration: none;
-    width: 140px;
+    width: 80%;
     margin: 5px;
     text-align: center;
     color: $color1;

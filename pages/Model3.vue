@@ -46,10 +46,10 @@
             </div> -->
             <div class="model3-div-cont-practica">
               <div class="model3-texto-practica" :class="this.showRs">
-                <h3 class="model3-texto-practica-static">abc</h3>
+                <h3 :class="'model3-texto-practica-static dm_t1_'+darkmode">abc</h3>
               </div>
               <div class="model3-texto-practica-dinamic" :class="this.showRd">
-                <h3 id="dinamico-romaji"></h3>
+                <h3 :class="'dm_t1_'+darkmode" id="dinamico-romaji"></h3>
               </div>
             </div>
           </div>
@@ -165,11 +165,11 @@
         </div>
 
         <div
-          :class="'model3_final_message model3_div_congrats_' + showGrats[0]"
+          :class="'model3_final_message model3_div_congrats_' + showGrats[0]+' dm_border_'+darkmode"
         >
           <h6>¡¡Bien Hecho!!</h6>
         </div>
-        <div :class="'model3_final_message model3_div_nograts_' + showGrats[1]">
+        <div :class="'model3_final_message model3_div_nograts_' + showGrats[1] +' dm_border_'+darkmode">
           <h6>Mas práctica! :D</h6>
         </div>
       </div>

@@ -30,7 +30,7 @@
           <h3 class="nav-text-set">Settings</h3>
         </div>
 
-        <div id="opt_large" :class="'nav_div_cont_settings nav-hide-' + sttingsDisplay">
+        <div id="opt_large" :class="'nav_div_cont_settings nav-hide-' + sttingsDisplay+' dm_b2_'+darkmode">
           <div @click="muteSound" :class="'nav_boton_set ' + 'navopt_pressed_' + muted">
             <svg class="nav_set_icon" alt="icono-mute" viewBox="0 0 20 20">
               <path
