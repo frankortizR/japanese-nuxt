@@ -526,7 +526,8 @@ export default {
     clearInterval(this.interval - 1);
   },
   beforeDestroy() {
-    //this.player.destroy();
+    clearInterval(this.interval);
+    clearInterval(this.interval - 1);
   },
 };
 </script>

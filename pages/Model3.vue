@@ -589,5 +589,9 @@ export default {
     clearInterval(this.interval);
     clearInterval(this.interval - 1);
   },
+  beforeDestroy() {
+    clearInterval(this.interval);
+    clearInterval(this.interval - 1);
+  },
 };
 </script>

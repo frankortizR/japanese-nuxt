@@ -290,9 +290,9 @@ import { mapState } from "vuex";
   },
   methods: {
     playSound() {
+      console.log('ekecutandose')
       if (this.muted == true) {
       } else this.player.play();
-      
     },
 
     nextOnePressed() {
@@ -370,7 +370,10 @@ import { mapState } from "vuex";
     
   },
   beforeUnmount() {
-    
+    clearInterval(this.interval);
+    clearInterval(this.interval - 1);
+  },
+  beforeDestroy() {
     clearInterval(this.interval);
     clearInterval(this.interval - 1);
   },
