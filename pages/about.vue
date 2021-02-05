@@ -45,6 +45,21 @@ export default {
     Navbar,
     Cfooter
   },
+  head(){
+      return{
+        title: 'Informacion',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Plataforma para practicar el idioma Japones con sus alfabetos de Hiragana y Katakana'
+          }
+        ],
+        htmlAttrs:{
+          lang: 'es',
+        }
+      }
+    },
   computed: {
     ...mapState(["muted", "darkmode"]),
   },

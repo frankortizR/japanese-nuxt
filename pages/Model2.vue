@@ -116,6 +116,21 @@ export default {
     Navbar,
     Cfooter,
   },
+  head(){
+      return{
+        title: 'Modelo de practica A',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Plataforma para practicar el idioma Japones con sus alfabetos de Hiragana y Katakana'
+          }
+        ],
+        htmlAttrs:{
+          lang: 'es',
+        }
+      }
+    },
   data() {
     return {
       showRd: "",

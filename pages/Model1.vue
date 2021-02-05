@@ -111,6 +111,21 @@ import { mapState } from "vuex";
 
   export default {
   name: "Model1",
+  head(){
+      return{
+        title: 'Model de practica C',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Plataforma para practicar el idioma Japones con sus alfabetos de Hiragana y Katakana'
+          }
+        ],
+        htmlAttrs:{
+          lang: 'es',
+        }
+      }
+    },
   components: {
     Navbar,
     Cfooter,

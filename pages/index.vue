@@ -95,6 +95,21 @@
       Navbar,
       Cfooter,
     },
+    head(){
+      return{
+        title: 'Japanese Practice - Home',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Plataforma para practicar el idioma Japones con sus alfabetos de Hiragana y Katakana'
+          }
+        ],
+        htmlAttrs:{
+          lang: 'es',
+        }
+      }
+    },
     data() {
       return {
         stylusmoodelIcon: require("../assets/img/icons/quill-drawing-a-line.svg"),
