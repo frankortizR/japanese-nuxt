@@ -1,4 +1,5 @@
 
+
 .titulo-principal {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -13,7 +14,10 @@
 
 
 .model1-div-cont-part1 {
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     margin-top: 60px;
     margin-bottom: 20px;
 }
@@ -45,7 +49,10 @@
 
 
 .model1-div-cont-info {
-    user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
     cursor: default;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -66,8 +73,12 @@
 }
 
 .model1-modelo-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
 }
 
@@ -98,12 +109,16 @@
     display: -ms-flexbox;
     display: flex;
         -ms-flex-direction: column;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                flex-direction: column;
     width: 70%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -ms-flex-line-pack: center;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
 }
 
@@ -493,7 +508,8 @@
             -ms-flex-direction: row;
                 flex-direction: row;
         -ms-flex-pack: distribute;
-            justify-content: center;
+            -webkit-box-pack: center;
+                justify-content: center;
         -ms-flex-line-pack: center;
             align-content: center;
         width: 300px;
@@ -571,7 +587,9 @@
     }
 
     .model1-div-cont-info{
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
     }
 
     .model1-modelo-head{
@@ -579,6 +597,8 @@
     }
     .model1-div-cont-configs{
         height: 10em;
-        justify-content: flex-end;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
     }
 }
