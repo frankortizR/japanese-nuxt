@@ -17,6 +17,12 @@ export const mutations = {
   },
   storeDarkmode(state){
     state.darkmode = !state.darkmode;
-  }
+    localStorage.dark = state.darkmode;
+  },
+  localStorageVer(state){
+    if(localStorage.dark == 'true') state.darkmode = true;
+    
+    
+  },
 }
 

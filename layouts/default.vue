@@ -1,28 +1,39 @@
 <template>
-  <div :class="'default_layout dm_b1_'+darkmode">
-    <navbar/>
+  <div :class="'default_layout dm_b1_' + darkmode">
+    <navbar />
     <Nuxt />
-    <Cfooter/>
+    <Cfooter />
   </div>
 </template>
 
 <script>
-import Navbar from '../components/Navbar'
-import Cfooter from '../components/Footer'
-import { mapState } from "vuex";
+import Navbar from "../components/Navbar";
+import Cfooter from "../components/Footer";
+import { mapState, mapMutations } from "vuex";
 
 export default {
-  components:{
+  components: {
     Navbar,
-    Cfooter
+    Cfooter,
   },
   computed: {
     ...mapState(["darkmode"]),
   },
-}
+  methods: {
+    ...mapMutations(["storeDarkmode", "localStorageVer"]),
+    localStorageCheck() {
+      if (localStorage.dark) {
+        console.log("reconocio el valor en local sstorage");
+        this.localStorageVer();
+      }
+    },
+  },
+  mounted() {
+    this.localStorageCheck();
+  },
+};
 </script>
 
 <style lang="scss" src="../scss/main.scss">
-
 </style>
 
