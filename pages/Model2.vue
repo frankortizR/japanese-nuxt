@@ -280,6 +280,13 @@ export default {
       ],
       player: null,
       index: Math.floor(Math.random() * (1 + 45 - 0) + 0),
+      xm : 0,
+      ym : 0,
+      isDrawingm : false,
+      canvasm : null,
+      isPenm : false,
+      cm : null,
+      canvasm :null
     };
   },
   computed: {
@@ -361,8 +368,70 @@ export default {
       let ctx2 = c.getContext("2d");
       ctx2.clearRect(0, 0, this.canvas_with, this.canvas_height);
     },
+    beginDrawingm(e){
+      if (e.pointerType === "pen") {
+          this.isPenm = true;
+        } else {
+          this.isPenm = false;
+        }
+        this.xm = e.offsetX;
+        this.ym = e.offsetY;
+        this.isDrawingm = true;
+    },
+    keepDrawingm(e){
+      if (this.isDrawingm === true) {
+          this.drawLinem(this.xm, this.ym, e.offsetX, e.offsetY);
+          this.xm = e.offsetX;
+          this.ym = e.offsetY;
+        }
+    },
+    stopDrawingm(e){
+      if (this.isDrawingm === true) {
+          this.drawLinem(this.xm, this.ym, e.offsetX, e.offsetY);
+          this.xm = 0;
+          this.ym = 0;
+          this.isDrawingm = false;
+        }
+    },
+    drawLinem(x1, y1, x2, y2){
+      let ctx = this.canvasm;
+        ctx.beginPath();
+        ctx.strokeStyle = "#022E40";
+        ctx.lineWidth = 4;
+        ctx.lineCap = "bevel";
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+        ctx.closePath();
+    },
     listenerGeneral() {
-      
+      //---- PArte de prueba para modificacion hacia metodaos
+      this.cm = document.getElementById("model2-mycanvas");
+      this.canvasm = this.cm.getContext("2d");
+      this.cm.addEventListener("mousedown", this.beginDrawingm);
+      this.cm.addEventListener("mousemove", this.keepDrawingm);
+      this.cm.addEventListener("mouseup", this.stopDrawingm);
+      this.cm.addEventListener("pointerdown", this.beginDrawingm, {
+        capture: true,
+      });
+      this.cm.addEventListener("pointermove", this.keepDrawingm);
+      this.cm.addEventListener("pointerup", this.stopDrawingm);
+      this.cm.addEventListener(
+        "touchstart",
+        function (e) {
+          if (this.isPenm) {
+            e.preventDefault();
+            beginDrawing(TouchEvent);
+          }
+          e.preventDefault();
+        },
+        {
+          passive: false,
+          capture: false,
+        }
+      );
+      //---- final parte de prueba
+      /*
       let x = 0;
       let y = 0;
       let isDrawing = false;
@@ -432,6 +501,7 @@ export default {
           isDrawing = false;
         }
       }
+      */
     },
     romajiChecker(val){
       if (val == false) {
