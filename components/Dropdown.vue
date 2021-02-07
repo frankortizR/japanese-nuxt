@@ -1,19 +1,48 @@
 <template>
-  <div :class="'drop-div-cont-drop dm_b2_'+darkmode">
-    <router-link class="d-link" to="/">
-      <svg class="drop-icono-home drop-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M 8 20 H 3 V 10 H 0 L 10 0 l 10 10 h -3 v 10 h -5 v -6 H 8 v 6 Z" /></svg>
-      
+  <div :class="'drop-div-cont-drop dm_b2_' + darkmode">
+    <nuxt-link class="d-link" to="/">
+      <svg
+        class="drop-icono-home drop-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M 8 20 H 3 V 10 H 0 L 10 0 l 10 10 h -3 v 10 h -5 v -6 H 8 v 6 Z"
+        />
+      </svg>
+
       Inicio
-    </router-link>
-    <router-link class="d-link" to="/about">
-      <svg class="drop-icono-about drop-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M 2.93 17.07 A 10 10 0 1 1 17.07 2.93 A 10 10 0 0 1 2.93 17.07 Z M 9 11 v 4 h 2 V 9 H 9 v 2 Z m 0 -6 v 2 h 2 V 5 H 9 Z" /></svg>
-      
+    </nuxt-link>
+    <nuxt-link class="d-link" to="/about">
+      <svg
+        class="drop-icono-about drop-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M 2.93 17.07 A 10 10 0 1 1 17.07 2.93 A 10 10 0 0 1 2.93 17.07 Z M 9 11 v 4 h 2 V 9 H 9 v 2 Z m 0 -6 v 2 h 2 V 5 H 9 Z"
+        />
+      </svg>
+
       Info
-    </router-link>
-    <div class="d-link">
-      <svg class="drop-icono-opt drop-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M 20 10 a 10 10 0 1 1 -20 0 a 10 10 0 0 1 20 0 Z M 10 2 a 8 8 0 1 0 0 16 a 8 8 0 0 0 0 -16 Z m -0.7 10.54 L 5.75 9 l 1.41 -1.41 L 10 10.4 l 2.83 -2.82 L 14.24 9 L 10 13.24 l -0.7 -0.7 Z" /></svg>
-      opciones
-    </div>
+    </nuxt-link>
+    <nuxt-link class="d-link" to="/comments">
+      <svg
+        class="drop-icono-opt drop-icon"
+        viewBox="0 0 512 512"
+        width="512"
+        height="512"
+        version="1.1"
+      >
+        <title />
+        <g id="icomoon-ignore"></g>
+        <path
+          d="M 0 448 h 512 v 32 h -512 Z M 512 384 v 32 h -512 v -32 l 64 -128 h 128 v 64 h 128 v -64 h 128 Z M 112 160 l 144 -144 l 144 144 h -112 v 128 h -64 v -128 Z"
+        />
+      </svg>
+
+      Sugerencias
+    </nuxt-link>
   </div>
 </template>
 
@@ -25,6 +54,5 @@ export default {
   computed: {
     ...mapState(["darkmode"]),
   },
-  
 };
 </script>
