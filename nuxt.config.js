@@ -32,8 +32,15 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/sitemap'
   ],
+
+  //sitemap
+  sitemap: {
+    hostname: 'http://www.leshima.online',
+    gzip: true,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
