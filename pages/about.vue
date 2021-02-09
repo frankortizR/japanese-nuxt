@@ -47,7 +47,7 @@ export default {
   },
   head(){
       return{
-        title: 'Informacion',
+        title: 'Información',
         meta: [
           {
             hid: 'description',

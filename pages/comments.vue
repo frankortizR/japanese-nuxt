@@ -85,7 +85,7 @@ export default {
   },
   head() {
     return {
-      title: "Japanese Practice - Sugerencias",
+      title: "Sugerencias",
       meta: [
         {
           hid: "description",

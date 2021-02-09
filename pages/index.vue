@@ -97,7 +97,7 @@
     },
     head(){
       return{
-        title: 'Japanese Practice - Home',
+        title: 'Leshima',
         meta: [
           {
             hid: 'description',
