@@ -102,7 +102,7 @@
           {
             hid: 'description',
             name: 'description',
-            content: 'Practica japones con ---- , memoriza los caracteres del hiragana, memoriza el alfabeto japones con diversos ejercicios de memorización. Tu mejor opción de practicar el abecedario japones hiragana'
+            content: 'Practica japones con Leshima , memoriza los caracteres del hiragana, memoriza el alfabeto japones con diversos ejercicios de memorización. Tu mejor opción de practicar el abecedario japones hiragana'
           },
           {
             hid: 'keywords',
