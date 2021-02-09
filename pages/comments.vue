@@ -91,7 +91,38 @@ export default {
           hid: "description",
           name: "description",
           content:
-            "Plataforma para practicar el idioma Japones con sus alfabetos de Hiragana y Katakana",
+            "Sección de comentarios a disposición de los usuarios para poder brindar sus observaciones, sugerencias y experiencias en nuestra plataforma",
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content:
+            "japones, hiragana, práctica, practicar, aprender japones, aprender hiragana, memorizar hiragana",
+        },
+        {
+          hid: "owner",
+          name: "owner",
+          content: "Rath",
+        },
+        {
+          hid: "robots",
+          name: "robots",
+          content: "index,follow",
+        },
+        {
+          hid: "theme-color",
+          name: "theme-color",
+          content: "#022E40",
+        },
+        {
+          hid: "apple-mobile-web-app-capable",
+          name: "apple-mobile-web-app-capable",
+          content: "yes",
+        },
+        {
+          hid: "apple-mobile-web-app-status-bar-style",
+          name: "apple-mobile-web-app-status-bar-style",
+          content: "yes",
         },
       ],
       htmlAttrs: {
@@ -174,8 +205,8 @@ export default {
         );
         console.log(respuesta.data);
         this.comentarios = respuesta.data.reverse();
-        setTimeout( this.moreComments, 500);
-        console.log('no shit');
+        setTimeout(this.moreComments, 500);
+        console.log("no shit");
       } catch (error) {
         console.error(error);
         console.log(error);

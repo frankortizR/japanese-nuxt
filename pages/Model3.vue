@@ -175,7 +175,7 @@
       </div>
     </div>
 
-    <div class="home-div-cont-advertaisment">Advertisment</div>
+    <!-- <div class="home-div-cont-advertaisment">Advertisment</div> -->
   </div>
 </template>
 
@@ -198,8 +198,38 @@ export default {
           {
             hid: 'description',
             name: 'description',
-            content: 'Plataforma para practicar el idioma Japones con sus alfabetos de Hiragana y Katakana'
-          }
+            content: 'Practica de selección del ítem correcto con 3 opciones, ayuda a la memorización visual del hiragana en la practica del japones'
+          },
+          {
+            hid: 'keywords',
+            name: 'keywords',
+            content: 'japones, hiragana, práctica, practicar, aprender japones, aprender hiragana, memorizar hiragana'
+          },
+          {
+            hid: 'owner',
+            name: 'owner',
+            content: 'Rath'
+          },
+          {
+            hid: 'robots',
+            name: 'robots',
+            content: 'index,follow'
+          },
+          {
+            hid: 'theme-color',
+            name: 'theme-color',
+            content: '#022E40'
+          },
+          {
+            hid: 'apple-mobile-web-app-capable',
+            name: 'apple-mobile-web-app-capable',
+            content: 'yes'
+          },
+          {
+            hid: 'apple-mobile-web-app-status-bar-style',
+            name: 'apple-mobile-web-app-status-bar-style',
+            content: 'yes'
+          },
         ],
         htmlAttrs:{
           lang: 'es',
