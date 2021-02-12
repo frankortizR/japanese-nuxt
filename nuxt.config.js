@@ -47,7 +47,7 @@ export default {
 
   //analytics
   googleAnalytics: {
-    id: 'G-STM6LDF2PH'
+    id: '2320344235'
   },
 
   //sitemap

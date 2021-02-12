@@ -105,7 +105,7 @@ import Vue from 'vue';
 import VueAnalytics from 'vue-analytics';
 
 Vue.use(VueAnalytics, {
-  id: 'G-STM6LDF2PH'
+  id: '2320344235'
 })
 
 export default {
