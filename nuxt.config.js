@@ -10,6 +10,15 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'google-site-verification', name: 'google-site-verification', content:'PWUwfUXGXLWzgbAmL4JWJqePXenLj8g9q5FjLh6JT0k'}
     ],
+    script:[
+      {
+        src:'https://www.googletagmanager.com/gtag/js?id=G-HZVTM6YB2V',
+        async:true,
+      },
+      {
+        src:'/js/analytics.js'
+      },
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
