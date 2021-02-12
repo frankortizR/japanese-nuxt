@@ -101,12 +101,6 @@
 import Navbar from "../components/Navbar.vue";
 import Cfooter from "../components/Footer";
 import { mapState } from "vuex";
-import Vue from 'vue';
-import VueAnalytics from 'vue-analytics';
-
-Vue.use(VueAnalytics, {
-  id: '2320344235'
-})
 
 export default {
   name: "Home",
@@ -175,12 +169,7 @@ export default {
     eventTest() {
       this.$ga.page('/');
       console.log('clicked');
-      this.$ga.event({
-        eventCategory: "testings",
-        eventAction: "title-event",
-        eventLabel: "first test of events",
-        eventValue: 1,
-      });
+      
     },
   },
 };
