@@ -18,6 +18,16 @@ export default {
         content: 'PWUwfUXGXLWzgbAmL4JWJqePXenLj8g9q5FjLh6JT0k'
       }
     ],
+    script: [{
+        //src: "https://code.jquery.com/jquery-3.5.1.min.js",
+        src:'/js/analytics.js',
+
+      },
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=G-J2QP4C4J8Y",
+        async: true,
+      },
+    ],
     link: [{
       rel: 'icon',
       type: 'image/x-icon',
